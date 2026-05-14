@@ -4,12 +4,13 @@ Static QR code generator for links.
 
 ## Deploy to Layero
 
-Use Layero default settings:
+Use these Layero settings:
 
-- Build command: `npm run build`
-- Output directory: `dist`
+- Project type: `Static (no build)`
+- Build command: empty
+- Output directory: `.`
 
-The build copies these static files into `dist`:
+The app is plain static HTML and does not need a build step:
 
 - `index.html`
 - `styles.css`

@@ -1,0 +1,12 @@
+.kerno/
+__pycache__/
+*.py[cod]
+
+build/
+dist/
+release/
+*.spec
+
+.env
+.DS_Store
+Thumbs.db

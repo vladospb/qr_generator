@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR для ссылки</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="workspace" aria-label="Генератор QR-кода">
+      <div class="controls">
+        <h1>QR для ссылки</h1>
+        <label class="field">
+          <span>Ссылка</span>
+          <input id="urlInput" type="url" placeholder="https://example.com" autocomplete="url" spellcheck="false">
+        </label>
+        <div class="row">
+          <label class="field compact">
+            <span>Размер</span>
+            <select id="sizeInput">
+              <option value="256">256 px</option>
+              <option value="384" selected>384 px</option>
+              <option value="512">512 px</option>
+              <option value="768">768 px</option>
+            </select>
+          </label>
+          <label class="field compact">
+            <span>Отступ</span>
+            <select id="marginInput">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button id="generateButton" type="button">Создать</button>
+          <a id="downloadButton" class="button secondary disabled" href="#" download="qr-code.png" aria-disabled="true">Скачать</a>
+        </div>
+        <p id="message" class="message" role="status"></p>
+      </div>
+
+      <div class="preview" aria-label="Предпросмотр QR-кода">
+        <canvas id="qrCanvas" width="384" height="384"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="qr.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

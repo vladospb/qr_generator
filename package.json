@@ -1,10 +1,12 @@
 {
   "name": "qr-link-generator",
   "version": "1.0.0",
-  "private": true,
   "description": "Static QR code generator for links.",
   "scripts": {
     "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {}
 }
